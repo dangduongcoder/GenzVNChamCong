@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Login 05</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <style>
+        .select2-container--default .select2-selection--single {
+            height: 48px;
+            background: #fff;
+            color: #000;
+            font-size: 16px;
+            border-radius: 5px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .select2-selection__arrow {
+            margin-top: 8px;
+        }
+        .congviec {
+            display: block;
+        }
+    </style>
+
+    <section class="">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5">
+                    <div class="wrap">
+                        <div class="img" style="background-image: url(images/bg-1.jpg);"></div>
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4">Chấm công</h3>
+                                </div>
+                            </div>
+                            <div class="signin-form">
+                                <div class="form-group mt-3">
+                                    <span>
+                                        Mã nhân viên
+                                        <select id="manhanvien" class="js-states form-control" name="manhanvien">
+                                        </select>
+                                    </span>
+
+                                </div>
+                                <hr>
+                                <div id="jobs">
+                                    <div class="form-group mt-3" id="form-1">
+                                        <span>
+                                            Công việc 1
+                                            <select id="job-1" class="js-states form-control" name="congviec">
+                                            </select>
+                                        </span>
+                                        <div class="form-group f-flex mt-4">
+                                            <input id="kpi-1" type="" class="form-control fw-bold" required>
+                                            <label class="form-control-placeholder">KPI</label>
+                                        </div>
+                                        <div class="form-group f-flex mt-4">
+                                            <button onclick="removeJob(1)" id="remove-1" class="btn btn-danger rounded px-3 w-100">Xoá công việc 1</button>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    
+                                </div>
+
+
+                                <div class="form-group">
+                                    <button id="add-job" class="btn btn-warning rounded px-3 w-100">Thêm việc
+                                        khác</button>
+                                </div>
+                                <div class="form-group">
+                                    <button onclick="getAllInput()" class="form-control btn btn-primary rounded px-3">Báo cáo</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

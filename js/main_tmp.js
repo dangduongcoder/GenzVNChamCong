@@ -49,10 +49,38 @@ $(document).ready(function () {
 });
 
 function sendData() {
-    $.post(API, `${ggFormMaNV}=1&${ggFormMaXT}=2&${ggFormMaCV}=3&${ggFormKPI}=4`)
-        .done(function (data) {
-            alert("Data Loaded: " + data);
-        });
+    fetch(API, {
+        method: "POST",
+        headers: {
+            'authority': 'docs.google.com',
+            'Content-Type': 'application/json',
+            'x-client-data': 'CIe2yQEIorbJAQjEtskBCKmdygEImOTKAQiTocsBCNvvywEI07nMAQi3uswBCPi6zAEIgLvMAQiJu8wBCKa8zAEIlb3MAQjEv8wBCPrAzAEYq6nKAQ==',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+        },
+        body: `${ggFormMaNV}=1&${ggFormMaXT}=2&${ggFormMaCV}=3&${ggFormKPI}=4`
+    })
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch (err => console.log(err));
+
+    // $.ajax({
+    //     type: 'POST',
+    //     url: API,
+    //     headers: {
+    //         'authority': 'docs.google.com',
+    //         'Content-Type': 'application/json',
+    //         'x-client-data': 'CIe2yQEIorbJAQjEtskBCKmdygEImOTKAQiTocsBCNvvywEI07nMAQi3uswBCPi6zAEIgLvMAQiJu8wBCKa8zAEIlb3MAQjEv8wBCPrAzAEYq6nKAQ==',
+    //         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    //     },
+    //     data: `${ggFormMaNV}=1&${ggFormMaXT}=2&${ggFormMaCV}=3&${ggFormKPI}=4`
+    //     //OR
+    //     //beforeSend: function(xhr) {
+    //     //  xhr.setRequestHeader("My-First-Header", "first value");
+    //     //  xhr.setRequestHeader("My-Second-Header", "second value");
+    //     //}
+    // }).done(function (data) {
+    //     alert(data);
+    // });
 }
 
 
