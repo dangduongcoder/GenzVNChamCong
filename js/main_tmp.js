@@ -4,21 +4,17 @@
 var manhanvien = [
     { id: 'LS1', text: 'NV 1' },
     { id: 'LS2', text: 'NV 2' },
-    { id: 'LS3', text: 'NV 3' },
-    { id: 'LS4', text: 'NV 4' },
-    { id: 'LS5', text: 'NV 5' }
+    { id: 'LS3', text: 'NV 3' }
 ];
 
 var congviec = [
     { id: 'LS1', text: 'Livestream 1' },
     { id: 'LS2', text: 'Livestream 2' },
-    { id: 'LS3', text: 'Livestream 3' },
-    { id: 'LS4', text: 'Livestream 4' },
-    { id: 'LS5', text: 'Livestream 5' }
+    { id: 'LS3', text: 'Livestream 3' }
 ];
 
 
-const API = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScZPEhYygPd4cE0HIgPXFhQzibvI5xw-QmGgGPsldPRgmk9pQ/formResponse'
+const API = 'https://api.sheetmonkey.io/form/qqdH4sYTBLEiNmCYW27HD5'
 const ggFormMaNV = 'entry.1564884042'//ID Form Mã nhân viên
 const ggFormMaXT = 'entry.1323120707'//ID Form Mã xác thực
 const ggFormMaCV = 'entry.109285077'//ID Form Mã công việc
